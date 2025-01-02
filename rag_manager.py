@@ -96,8 +96,6 @@ def query_rag(
             embedding_function = select_embeddings(model_type)
             # Load Chroma vector store
             db = Chroma(persist_directory=chroma_path, embedding_function=embedding_function)
-
-            # Perform similarity search
             results = db.similarity_search_with_score(query_text, k=5)
             if results:
                 # Build context from results
