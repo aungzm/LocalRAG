@@ -1,0 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+Lib/
+env/
+.env/
+env.bak/
+.env.bak/
+
+# Config files
+*.ini
+*.cfg
+
+# Scripts
+*.bat
+Scripts/
+
+# Migrations and database files
+*.sqlite3
+migrations/
+*.db
+
+# Folders used for sample data and database
+watched_folder/
+db/
+
+
+# Environments 
+.env 
+
+# Coverage
+.coverage
+.coverage.*
+.cache
+coverage.xml
+htmlcov/
+
+# Pytest
+.pytest_cache/
+
+# PyInstaller
+build/
+dist/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage results
+.tox/
+.nox/
+
+# Editor directories and files
+.vscode/
+.idea/
+
+# macOS metadata
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db

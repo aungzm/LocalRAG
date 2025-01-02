@@ -1,0 +1,28 @@
+generator client {
+provider = "prisma-client-py"
+}
+
+datasource db {
+  provider = "sqlite" // or any other database provider you use
+  url      = env("DATABASE_URL")
+}
+
+model ChatInfo {
+  chatId        Int      @id @default(autoincrement())
+  chatName      String
+  watchingFolder String
+  dbPath        String
+  llmType       String
+  llmArgs       String
+  chatLogs      ChatLog[]
+}
+
+model ChatLog {
+    id       Int      @id @default(autoincrement())
+    chatId   Int
+    message    String
+    sender   String
+    createdAt DateTime @default(now())
+
+    chatInfo ChatInfo @relation(fields: [chatId], references: [chatId], onDelete: Cascade)
+}
