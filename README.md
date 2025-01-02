@@ -56,6 +56,8 @@ This project combines a **FolderWatcher** utility with a **Chat Management Syste
 ### Prerequisites
 - Python 3.8+
 - `pip` package manager
+- ollama installed and your choice of model (to run locally)
+
 
 ### Install Dependencies
 1. Clone the repository:
@@ -76,15 +78,14 @@ This project combines a **FolderWatcher** utility with a **Chat Management Syste
 ---
 
 ## Usage
+### For locall LLMs
+1. Start Ollama (to run locally)
+2. Download a model (ollama pull mistral)
 
-### Running the FolderWatcher
-```bash
-python folderwatch.py
-```
-- Monitors the `watched_folder` directory for file changes.
-- Logs and updates file states in `file_hashes.csv`.
+### For OpenAI
+1. Get OpenAI Api key
 
-### Chat Management
+### Start chatting
 ```bash
 python main.py
 ```
@@ -93,12 +94,7 @@ Options:
 2. Continue an existing chat.
 3. Delete one or more chats.
 
-### Arguments for Vector Database Management
-- Run document processing commands using `vector_db.py`:
-```bash
-python vector_db.py --scan_type <type> --chroma_path <path> --data_path <path> --model_type <type>
-```
-- **Scan Types:** `reset`, `modify`, `remove`, `full`.
+**Give inputs as required**
 
 ---
 
@@ -132,4 +128,5 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 - [LangChain](https://github.com/hwchase17/langchain)
 - [Prisma](https://www.prisma.io/)
+- [Ollama](https://ollama.com/)
 - [Watchdog](https://github.com/gorakhargosh/watchdog)
