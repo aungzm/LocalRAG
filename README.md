@@ -1,4 +1,4 @@
-# FolderWatcher & Chat Management System
+- [Ollama](https://ollama.com/)
 
 This project combines a **FolderWatcher** utility with a **Chat Management System** powered by local and cloud-based language models (LLMs). It enables real-time file tracking, database updates, and interaction with LLMs for intelligent query handling and document processing.
 
@@ -73,6 +73,12 @@ This project combines a **FolderWatcher** utility with a **Chat Management Syste
 3. Install dependencies:
    ```bash
    pip install -r requirements.txt
+   ```
+
+4. Setup Prisma ORM (for database management):
+   ```bash
+   prisma generate
+   prisma migrate deploy
    ```
 
 ---
